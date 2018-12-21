@@ -1,0 +1,336 @@
+@import '../../assets/styles/variable.less';
+@import '../../assets/styles/mixin.less';
+
+.upload {
+  width: 100%;
+  min-height: 100%;
+  background-image: url('../../assets/images/02/bg-2.png');
+  &-main {
+    position: relative;
+    z-index: 2;
+    .px2rem(padding-top, 60);
+    .main-mask {
+      .px2rem(width, 520);
+      .px2rem(height, 750);
+      .px2rem(border-radius, 4);
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border: .04rem solid #c0ab5c;
+      .mask-floor {
+        position: absolute;
+        left: -1px;
+        bottom: 0;
+        z-index: 2;
+      }
+      .mask-qrcode {
+        .px2rem(padding, 4);
+        .px2rem(right, 18);
+        .px2rem(bottom, 12);
+        background: @color-fff;
+        position: absolute;
+        z-index: 3;
+      }
+      .mask-txt {
+        .px2rem(font-size, 48);
+        .px2rem(top, 20);
+        .px2rem(right, 20);
+        .px2rem(letter-spacing, 3);
+        color: @color-fff;
+        position: absolute;
+        z-index: 2;
+      }
+      .mask-img, .mask-head {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .mask-slogan {
+        .px2rem(padding-bottom, 40);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        bottom: 0;
+        background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(#000));
+        [class^='slogan'] {
+          .px2rem(padding-bottom, 4);
+          .px2rem(padding-left, 6);
+          text-align: center;
+          span {
+            display: inline-block;
+            .px2rem(font-size, 30);
+          .px2rem(padding-left, 4);
+          }
+        }
+        .slogan-name {
+          transform: rotate(3deg);
+          img {
+            .px2rem(width, 60);
+            vertical-align: text-bottom;
+          }
+          span {
+            color: @color-slogan-gold;
+          }
+        }
+        .slogan-love {
+          transform: rotate(2deg);
+          img {
+            .px2rem(width, 60);
+            vertical-align: text-bottom;
+          }
+          span {
+            color: @color-slogan-gray;
+          }
+        }
+        .slogan-ta {
+          transform: rotate(-1deg);
+          img {
+            .px2rem(width, 110);
+            vertical-align: text-top;
+          }
+          span {
+            color: @color-slogan-gold;
+            transform: rotate(-3deg);
+          }
+        }
+        .slogan-jx {
+          .px2rem(margin-top, -10);
+          img {
+            .px2rem(width, 285);
+          }
+        }
+        .slogan-desc {
+          transform: rotate(-5deg);
+          .px2rem(margin-top, -10);
+          span {
+            color: @color-slogan-gray;
+          }
+        }
+        .slogan-ty {
+          .px2rem(margin-top, -14);
+          img {
+            .px2rem(width, 478);
+          }
+        }
+      }
+      .mask-head {
+        .px2rem(height, 90);
+        background: rgba(73, 72, 72, .5);
+      }
+      .mask-icon {
+        .px2rem(width, 62);
+        .px2rem(height, 62);
+        .px2rem(top, 12);
+        position: absolute;
+        z-index: 2;
+      }
+      .mask-back {
+        .px2rem(left, 18);
+        background-image: url('../../assets/images/02/back.png');
+      }
+      .mask-cancel {
+        .px2rem(left, 18);
+        background-image: url('../../assets/images/02/cancel.png');
+      }
+      .mask-confirm {
+        .px2rem(right, 18);
+        background-image: url('../../assets/images/02/confirm.png');
+      }
+      .mask-box {
+        .px2rem(height, 646);
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        .box-upload {
+          .px2rem(width, 160);
+          .px2rem(padding-top, 180);
+          .px2rem(font-size, 50);
+          .poa-center();
+          z-index: 1;
+          background: url('../../assets/images/02/upload.png') left top no-repeat;
+          background-size: 1.6rem 1.6rem;
+          text-align: center;
+          color: @color-fff;
+          input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  &-flow {
+    .px2rem(margin-top, 30);
+    .px2rem(margin-left, 68);
+    position: relative;
+    z-index: 1;
+    .flow-title {
+      .px2rem(font-size, 34);
+      .px2rem(padding-top, 4);
+      .px2rem(padding-left, 2);
+      .px2rem(letter-spacing, 3);
+      color: @color-layout-footer;
+    }
+    .flow-again {
+      .px2rem(padding-top, 9);
+      .px2rem(padding-bottom, 9);
+      .px2rem(padding-left, 50);
+      .px2rem(padding-right, 11);
+      .px2rem(border-radius, 15);
+      .px2rem(font-size, 26);
+      .px2rem(letter-spacing, 3);
+      .px2rem(right, 104);
+      color: @color-upload-again;
+      border: 1px solid #f6efd1;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      background: url('../../assets/images/02/reupload.png') no-repeat 0.1rem center;
+      background-size: .29rem .29rem;
+    }
+    .flow-intro {
+      .px2rem(width, 620);
+      .px2rem(height, 122);
+      .px2rem(margin-top, 34);
+      background-image: url('../../assets/images/02/flow.png');
+    }
+  }
+  &-footer {
+    .px2rem(margin-top, 42);
+    .footer-btn {
+      .px2rem(width, 273);
+      .px2rem(height, 74);
+      margin: auto;
+      background-image: url('../../assets/images/02/btn.png');
+    }
+  }
+  &-form {
+    .form-box {
+      .px2rem(width, 486);
+      .px2rem(height, 694);
+      .px2rem(top, 104);
+      .px2rem(padding-top, 88);
+      .px2rem(padding-left, 40);
+      .px2rem(padding-right, 40);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 21;
+      background-image: url('../../assets/images/02/u-bg.png');
+    }
+    .form-input {
+      display: flex;
+      &.form-block {
+        display: block;
+        .input-item {
+          margin-left: 0;
+          box-sizing: border-box;
+          width: 100%;
+        }
+        .item-desc {
+          .px2rem(height, 97);
+          .px2rem(padding, 14);
+        }
+      }
+      &+.form-input {
+        .px2rem(margin-top, 20);
+      }
+      .input-label {
+        .px2rem(font-size, 28);
+        .px2rem(letter-spacing, 3);
+        .px2rem(line-height, 57);
+        color: @color-upload-label;
+      }
+      .input-item {
+        .px2rem(margin-left, 22);
+        .px2rem(padding-left, 14);
+        .px2rem(font-size, 22);
+        .px2rem(height, 57);
+        flex: 1;
+        color: @color-upload-input;
+        border: .02rem solid @color-upload-border;
+        background-color: @color-upload-input-bg;
+      }
+    }
+    .form-txt {
+      text-align: center;
+      .px2rem(font-size, 26);
+      .px2rem(margin-top, 26);
+      .px2rem(letter-spacing, 2);
+      color: #b9a24e;
+    }
+    .form-btn {
+      .px2rem(width, 111);
+      .px2rem(height, 59);
+      margin: 0.8rem auto 0;
+      background-image: url('../../assets/images/02/d-ok.png');
+    }
+  }
+  &-confirm {
+    .confirm-box {
+      .px2rem(width, 374);
+      .px2rem(height, 100);
+      .px2rem(top, 308);
+      .px2rem(padding-top, 40);
+      .px2rem(padding-bottom, 30);
+      .px2rem(padding-left, 36);
+      .px2rem(padding-right, 36);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 21;
+      background-image: url('../../assets/images/02/d-bg.png');
+    }
+    .confirm-txt {
+      .px2rem(font-size, 30);
+      .px2rem(letter-spacing, 3);
+      color: @color-upload-label;
+      white-space: nowrap;
+    }
+    .confirm-btn {
+      .px2rem(margin-top, 20);
+      display: flex;
+      justify-content: space-between;
+      .btn-item {
+        .px2rem(width, 111);
+        .px2rem(height, 59);
+      }
+      .btn-ok {
+        background-image: url('../../assets/images/02/d-ok.png');
+      }
+      .btn-cancel {
+        background-image: url('../../assets/images/02/d-cancel.png');
+      }
+    }
+  }
+}
+
+.box-loading {
+  .px2rem(width, 160);
+  .px2rem(padding-top, 159);
+  .poa-center();
+  top: 30%;
+  z-index: 3;
+  background: url('../../assets/images/02/loading.png') left top no-repeat;
+  background-size: 1.6rem 1.6rem;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}

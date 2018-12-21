@@ -1,0 +1,29 @@
+@import '../../assets/styles/variable.less';
+@import '../../assets/styles/mixin.less';
+
+.list-summary {
+  .px2rem(width, 196);
+  .px2rem(height, 283);
+  .px2rem(margin-right, 20);
+  background: @color-list-bg;
+  float: left;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &.list-add {
+    background: transparent;
+    border: 1px dashed #ccc;
+    box-sizing: border-box;
+    position: relative;
+    .add-poster {
+      .px2rem(width, 88);
+      .px2rem(height, 88);
+      .poa-center();
+      background-image: url('../../assets/images/03/add.png');
+    }
+  }
+  img {
+    .px2rem(width, 197);
+    .px2rem(height, 243);
+  }
+}

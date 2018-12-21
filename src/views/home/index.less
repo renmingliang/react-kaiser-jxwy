@@ -1,0 +1,105 @@
+@import '../../assets/styles/variable.less';
+@import '../../assets/styles/mixin.less';
+
+.home {
+  width: 100%;
+  min-height: 100%;
+  background-image: url('../../assets/images/01/bg-1.png');
+  &-main {
+    position: relative;
+    z-index: 1;
+    .main-logo {
+      .px2rem(width, 178);
+      .px2rem(height, 145);
+      .px2rem(left, 42);
+      .px2rem(top, 24);
+      background-image: url('../../assets/images/01/logo.png');
+      position: absolute;
+    }
+    .main-ty {
+      .px2rem(width, 309);
+      .px2rem(height, 631);
+      .px2rem(left, 210);
+      .px2rem(top, 62);
+      background-image: url('../../assets/images/01/ty.png');
+      position: absolute;
+    }
+    .main-flower {
+      .px2rem(width, 272);
+      .px2rem(height, 382);
+      .px2rem(top, 416);
+      right: 0;
+      background-image: url('../../assets/images/01/flower.png');
+      position: absolute;
+    }
+    .main-title-call {
+      .px2rem(width, 48);
+      .px2rem(height, 279);
+      .px2rem(right, 106);
+      .px2rem(top, 110);
+      background-image: url('../../assets/images/01/call.png');
+      position: absolute;
+    }
+    .main-title-center {
+      .px2rem(width, 554);
+      .px2rem(height, 229);
+      .px2rem(left, 98);
+      .px2rem(top, 530);
+      background-image: url('../../assets/images/01/center.png');
+      position: absolute;
+    }
+  }
+  &-intro {
+    .px2rem(padding-top, 838);
+    position: relative;
+    z-index: 2;
+    .intro-title {
+      .px2rem(font-size, 30);
+      .px2rem(line-height, 26);
+      .px2rem(letter-spacing, 3);
+      color: @color-layout-theme;
+      text-align: center;
+    }
+    .intro-txt {
+      .px2rem(width, 570);
+      .px2rem(height, 134);
+      .px2rem(border-radius, 10);
+      margin: .2rem auto 0;
+      background-color: rgba(255, 255, 255, .2);
+      p {
+        .px2rem(font-size, 20);
+        .px2rem(line-height, 26);
+        .px2rem(letter-spacing, 2);
+        .px2rem(padding-top, 22);
+        .px2rem(padding-left, 27);
+        .px2rem(padding-right, 24);
+        text-align: justify;
+        color: @color-layout-txt;
+      }
+      span {
+        color: @color-layout-theme;
+      }
+    }
+  }
+  &-footer {
+    .px2rem(padding-top, 60);
+    position: relative;
+    z-index: 2;
+    .footer-btn {
+      .px2rem(width, 273);
+      .px2rem(height, 74);
+      margin: auto;
+      background-image: url('../../assets/images/01/start.png');
+    }
+    .footer-txt {
+      text-align: center;
+      .font-yahei();
+      .px2rem(margin-top, 14);
+      .px2rem(font-size, 18);
+      .px2rem(line-height, 26);
+      .px2rem(letter-spacing, 2);
+      color: @color-layout-footer;
+      opacity: 0.31;
+    }
+  }
+}

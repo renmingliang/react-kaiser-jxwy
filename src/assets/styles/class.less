@@ -1,0 +1,91 @@
+// 字体icon
+[class*=icon-]{
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+// 处理某些机型下分辨率,出现白线情况
+.mt-1{
+  margin-top: -1px;
+}
+
+// 背景图属性
+.bg {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+// fixed固定定位 -- 组件加载提示框
+.fixed{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+.dialog-mask {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+// 通用class
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}
+.clearfix:after, .clearfix:before{
+  content: '';
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix{
+  zoom: 1;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+
+/*定义为flexbox的"父元素"*/
+.flex{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+/*垂直居中*/
+.flex-center{
+  /*子元素沿主轴对齐方式居中*/
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /*子元素沿交叉轴对齐方式居中*/
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+}
+/*指定主轴的伸缩流方向是纵向的*/
+.flex-ver{
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}

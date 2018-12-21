@@ -1,0 +1,21 @@
+.Jxwy-music{
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  z-index: 98;
+  .music-btn{
+    width: 3em;
+    height: 3em;
+    background: url('../../assets/images/01/music.png') no-repeat center center;
+    background-size: contain;
+  }
+  .animate{
+    animation: rotateMusic 2s linear infinite;
+  }
+}
+
+@keyframes rotateMusic{
+  100% {
+    transform: rotate(1turn);
+  }
+}
